@@ -1,1 +1,4 @@
+git init - inicializa um repositorio local 
 git remote add [nomecurto] [url]: - adiciona um repositorio remoto com nome local
+git status 
+
