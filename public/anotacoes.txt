@@ -1,3 +1,7 @@
 03-06-2018
 
 ► Terminei de configurar o git 
+
+05/06/2018
+► Configurei as pastas 
+► Estou usando no meu projeto o json-server 
