@@ -7,12 +7,14 @@
   <link rel="stylesheet" href="vendors/css/reset.css" type="text/css" media="all">
   <link rel="stylesheet" href="vendors/css/layout.css" type="text/css" media="all">
   <link rel="stylesheet" href="vendors/css/style.css" type="text/css" media="all">
-  <script id="angularScript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
-  <script src="//unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
   <!--[if lt IE 9]-->
-<script src="app/js/cod-js/html5.js"></script>
-<style type="text/css">.slider_bg {behavior:url("app/js/cod-js/PIE.htc")}</style>
-<![endif]-->
+  <script src="app/js/cod-js/html5.js"></script>
+  <style type="text/css">
+    .slider_bg {
+      behavior: url("app/js/cod-js/PIE.htc")
+    }
+  </style>
+  <![endif]-->
 </head>
 
 <body id="page1">
@@ -46,8 +48,8 @@
             </nav>
             <nav>
               <ul id="menu">
-                <li class="active">
-                  <a ui-sref="home" ui-sref-active="active">Restaurant</a>
+                <li ng-class="{active:activetab == '/'}">
+                  <a href='/'>Restaurant</a>
                 </li>
                 <li>
                   <a ui-sref="cuisine.html" ui-sref-active="active">Cuisine</a>
@@ -66,10 +68,9 @@
           </header>
           <!-- / header -->
           <!-- content -->
+          <div ng-view></div>
           <div class='content'>
-            <ng-view></ng-view>
-            <h1>TESTE</h1>
-          </div>
+           
           <!-- / content -->
         </div>
       </div>
@@ -125,10 +126,14 @@
           </div>
         </div>
       </div>
-
+      
+     
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
       
       <script src="app/js/home/home-component.js"></script>
       <script src="app/js/home/controller/home-controller.js"></script>
+
       <script src="app/js/cod-js/jquery-1.6.js"></script>
       <script src="app/js/cod-js/cufon-yui.js"></script>
       <script src="app/js/cod-js/cufon-replace.js"></script>
@@ -138,10 +143,10 @@
       <script src="app/js/cod-js/tms_presets.js"></script>
       <script src="app/js/cod-js/script.js"></script>
       <script src="app/js/cod-js/atooltip.jquery.js"></script>
-
+      <script>Cufon.now();</script>
+    
+      <script src="app/rotas.js"></script>     
       
-      <script src="app/main.js"></script>
-      <script src="app/rotas.js"></script>
     
 </body>
 

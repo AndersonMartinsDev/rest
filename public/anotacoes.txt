@@ -5,3 +5,13 @@
 05/06/2018
 ► Configurei as pastas 
 ► Estou usando no meu projeto o json-server 
+
+10/06/20187
+fonte: https://tableless.com.br/criando-uma-aplicacao-single-page-com-angularjs/
+► estudando sobre rotas
+• $routeProvider - é usado para configurar as rotas.
+• .when - é usado para definir com a url e o controler de uma view
+
+• $locationProvider - é usado para configurar como aplicação com os chamados "deep-liking" 
+irão ser armazenados, sendo setado "true" ele retira o "#" das urls
+

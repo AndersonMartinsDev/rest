@@ -1,47 +1,22 @@
-(function () {
-    const app = angular.module('app',[]);
+var app = angular.module('app',['ngRoute']);
 
+app.config(function($routeProvider, $locationProvider){
+    $locationProvider.html5Mode(true);
 
-    const configuration = ($stateProvider, $urlRouterProvider, $locationProvider) => {
+    $routeProvider
 
-        $locationProvider.html5Mode(true);
-        /*const rotaPrincipal = {
-            name: "principal",
-            url: "/home",
-            component: "home"
-        }
-        const rotaMenu = {
-            name: "menu",
-            url: "/menu",
-            component: "menu"
-        }
-        const sobreNos = {
-            name: "about",
-            url: "/aboutUs",
-            component: "aboutUs"
-        }
-        const contato = {
-            name: "contato",
-            url: "contact",
-            component: "contato"
-        }*/
+    .when('/',{
+        templateUrl: 'app/js/home/home.html',
+        controller: 'HomeCtrl'
+    })
+    .when('/menu',{
+        templateUrl:'app/js/food-book/menu.html',
+        controller: 'MenuCtrl'
+    })
+    .when('/contatos',{
+        templateUrl:'app/js/contacts/contacts.html',
+        controller: 'ContactsCtrl'
+    })
 
-        $routeProvider.when('/',{
-            templateUrl:'app/js/home/home.html',
-            controller:'showHomeCtrl'
-        })
-        /*$stateProvider.state(rotaPrincipal);
-        $stateProvider.state(rotaMenu);
-        $stateProvider.state(sobreNos);
-        $stateProvider.state(contato);
-        $urlRouterProvider.otherwise('/home');*/
-        $routeProvider.otherwise({redirecTo:'/'});
-        
-    }
-    injetor(configuration);
-
-})()
-
-function injetor(configuration) {
-    configuration.$inject = ['$stateProvider', 'urlRouterProvider'];
-}
+    .otherwise({redirectTo: '/'});
+});

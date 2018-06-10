@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/LeadLamps/rest/issues"
   },
-  "homepage": "https://github.com/LeadLamps/rest#readme"
+  "homepage": "https://github.com/LeadLamps/rest#readme",
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.7",
+    "angularjs": "0.0.1",
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1"
+  }
 }
