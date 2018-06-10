@@ -57,11 +57,11 @@
                 <li>
                   <a href="wine.html">Wine List</a>
                 </li>
-                <li>
-                  <a href="cook-book.html">CookBook</a>
+                <li ng-class="{active:activetab == '/menu'}">
+                  <a href="/menu">Cardápio</a>
                 </li>
-                <li>
-                  <a href="contacts.html">Contacts</a>
+                <li ng-class="{active:activetab == '/contactos'}">
+                  <a href="/contatos">Contacts</a>
                 </li>
               </ul>
             </nav>
@@ -133,7 +133,8 @@
       
       <script src="app/js/home/home-component.js"></script>
       <script src="app/js/home/controller/home-controller.js"></script>
-
+      <script src="app/js/food-book/menu-controller.js"></script>
+      
       <script src="app/js/cod-js/jquery-1.6.js"></script>
       <script src="app/js/cod-js/cufon-yui.js"></script>
       <script src="app/js/cod-js/cufon-replace.js"></script>

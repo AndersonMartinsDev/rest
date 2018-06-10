@@ -15,3 +15,5 @@ fonte: https://tableless.com.br/criando-uma-aplicacao-single-page-com-angularjs/
 • $locationProvider - é usado para configurar como aplicação com os chamados "deep-liking" 
 irão ser armazenados, sendo setado "true" ele retira o "#" das urls
 
+• Estudo sobre as cores - pesquisar
+
